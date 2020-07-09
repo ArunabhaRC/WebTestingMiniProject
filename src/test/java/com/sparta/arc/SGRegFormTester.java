@@ -5,9 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-
-import javax.swing.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -51,6 +48,13 @@ public class SGRegFormTester {
     public void addressPlaceholderTest(){
         page = page.goToHomePage();
         assertEquals(true,page.isAddressTextBoxcorrect());
+        webDriver.quit();
+    }
+
+    @Test
+    public void invalidFeedbackColour(){
+        page = page.goToHomePage();
+        assertEquals("rgba(220, 53, 69, 1)",page.isFeedbackRed());
         webDriver.quit();
     }
 

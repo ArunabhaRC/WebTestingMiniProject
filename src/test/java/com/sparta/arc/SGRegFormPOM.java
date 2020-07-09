@@ -2,11 +2,14 @@ package com.sparta.arc;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class SGRegFormPOM {
     WebDriver webDriver;
     By title = new By.ByClassName("main-content");
+    By notices = new By.ByClassName("invalid-feedback");
     By oxford = new By.ByXPath("/html/body/div/form/div[8]/div/select/option[2]");
     By cambridge = new By.ByXPath("/html/body/div/form/div[8]/div/select/option[3]");
     By sheffield = new By.ByXPath("/html/body/div/form/div[8]/div/select/option[4]");
@@ -41,6 +44,10 @@ public class SGRegFormPOM {
         return placeHolder.contains("Enter Last Name");
     }
 
+    public String isFeedbackRed(){
+        return  webDriver.findElement(notices).getCssValue("color");
+    }
+
     public boolean isAddressTextBoxcorrect(){
         String placeHolder = webDriver.findElement(By.id("inputAddress")).getAttribute("placeholder");
         return placeHolder.contains("1234 Main St");
@@ -69,5 +76,7 @@ public class SGRegFormPOM {
         webDriver.findElement(roehampton).click();
         return uni.contains("University of Roehampton");
     }
+
+
 }
 
