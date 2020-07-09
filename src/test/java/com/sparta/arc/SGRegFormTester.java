@@ -14,14 +14,13 @@ public class SGRegFormTester {
     SGRegFormPOM page = new SGRegFormPOM(webDriver);
 
     @Test
-    @DisplayName("Checking website URL is correct")
     public void siteUrlIsCorrect(){
         page = page.goToHomePage();
         assertEquals("http://localhost:9292/", page.getURl());
         webDriver.quit();
     }
+
     @Test
-    @DisplayName("Check to see if Sign in Application has a title")
     public void signInTitleTest(){
         page = page.goToHomePage();
         assertEquals(true,page.isAppTitleCorrect());
@@ -29,20 +28,12 @@ public class SGRegFormTester {
     }
 
     @Test
-    @DisplayName("Checking first name text box for placeholder")
     public void firstNamePlaceholderTest(){
         page = page.goToHomePage();
         assertEquals(true, page.isFirstnameTextBoxcorrect());
         webDriver.quit();
     }
 
-    @Test
-    @DisplayName("Checking last name text box for placeholder")
-    public void lastNamePlaceholderTest(){
-        page = page.goToHomePage();
-        assertEquals(true, page.isLastnameTextBoxcorrect());
-        webDriver.quit();
-    }
 
     @Test
     public void addressPlaceholderTest(){
@@ -65,29 +56,39 @@ public class SGRegFormTester {
         webDriver.quit();
     }
 
+
     @Test
-    public void uniOptionsCambridgeTest(){
+    public void maleClickedTest(){
+       page = page.goToHomePage();
+       assertEquals("rgba(33, 37, 41, 1)",page.isMaleclicked());
+       webDriver.quit();
+    }
+
+    @Test
+    public void countyOptionsHerts(){
         page = page.goToHomePage();
-        assertEquals(true,page.isUniCambridge());
+        assertEquals(true, page.isCountyHertforshire());
         webDriver.quit();
     }
 
     @Test
-    public void uniOptionsSheffieldTest(){
+    public void sDETClickedTest(){
         page = page.goToHomePage();
-        assertEquals(true, page.isUniSheffield());
+        assertEquals("rgba(33, 37, 41, 1)",page.isSDETclicked());
         webDriver.quit();
     }
 
     @Test
-    public void uniOptionsRoahamptonTest(){
+    public void devOpsClickedTest(){
         page = page.goToHomePage();
-        assertEquals(true,page.isUniRoehampton());
+        assertEquals("rgba(33, 37, 41, 1)",page.isDevOpsclicked());
         webDriver.quit();
     }
 
-
-
-
-
+    @Test
+    public void agreedToTermAndConditionsTest(){
+        page = page.goToHomePage();
+        assertEquals("rgba(40, 167, 69, 1)",page.isTermsClicked());
+        webDriver.quit();
+    }
 }
