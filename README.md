@@ -28,7 +28,7 @@ This is a breakdown of some tests that testers could possibly run, hopefully thi
 2. Testing Website Design:
     - Testing website design is very important as it is what all the users see. It can determine how inclined a user is to reuse the site. Testing things such as if there is a placeholder where text should go allows you to check what the user can see. The firstNamePlacholder method is just one of the methods where this is possible.
 
-    - This can be taken a step further in testing the design of tick boxes, if they work how they are meant to. For example using the isMaleClikced method will show you if Male was selected as the gender.
+    - This can be taken a step further in testing the design of tick boxes, if they work how they are meant to. For example using the isMaleClicked method will show you if Male was selected as the gender.
 
     - Drop down menus is also something that effects the design of the website. Can the options given be selected? How many options are there? Is there an option for if none of the other options apply to the user?
 
