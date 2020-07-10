@@ -17,7 +17,6 @@ ChromeDriver: Used to allow for the code created to control the google chrome br
 - Maven
 - JUNIT 4.6.2
 - Selenium 3.141.59
-- ruby 2.6.3p62
 
 ## Building Tests:
 This is a breakdown of some tests that testers could possibly run, hopefully this also gives you an understanding of what you should be looking for when testing. 
