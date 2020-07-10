@@ -5,7 +5,7 @@ The object of the program is to give testers an easier way to test the Sparta Gl
 
 
 ## Technology:
-GitHub: GitHub: Used for project management. Using it to manage the quality of code and also to back up everything needed for the project.
+GitHub: Used for project management. Using it to manage the quality of code and also to back up everything needed for the project.
 
 Intellij: IDE of choice, allowed for easy access to GitHub as I was able to push individual classes as and files when ever I desired.
 
